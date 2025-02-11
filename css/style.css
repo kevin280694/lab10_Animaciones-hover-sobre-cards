@@ -1,0 +1,83 @@
+/* Importar la fuente */
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed:700|Roboto:100,300,700&display=swap");
+
+/* Variables de colores */
+:root {
+  --dark-blue: #192129;
+  --blue: #43a3e6;
+  --light-gray: #f0f0f0;
+  --text: #333;
+}
+
+/* Estilos generales */
+body {
+  font-family: "Roboto Condensed", sans-serif;
+  background-color: var(--light-gray);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5em;
+  color: var(--dark-blue);
+  margin-top: 20px;
+}
+
+/* Contenedor de las tarjetas */
+.card-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+/* Diseño de cada tarjeta */
+.card {
+  background-color: white;
+  width: 250px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+}
+
+/* Imagen dentro de la tarjeta */
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+/* Contenido de la tarjeta */
+.card-content {
+  padding: 15px;
+}
+
+.card h2 {
+  font-size: 1.5em;
+  margin: 10px 0;
+  color: var(--blue);
+}
+
+.card p {
+  font-size: 1em;
+  color: var(--text);
+}
+
+/* 🎨 Efectos hover */
+.card:hover {
+  transform: scale(1.05) rotate(2deg) translateY(-5px);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+  opacity: 0.9;
+}
+
+/* Efecto hover en la imagen */
+.card:hover img {
+  transform: scale(1.1) rotate(-2deg);
+}
